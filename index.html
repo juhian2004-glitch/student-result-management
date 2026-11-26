@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Result Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Student Result Management</h2>
+
+    <form id="resultForm">
+      <input type="text" id="studentName" placeholder="Student Name">
+      <input type="text" id="studentId" placeholder="Student ID">
+      <input type="number" id="english" placeholder="English Marks (0-100)">
+      <input type="number" id="math" placeholder="Math Marks (0-100)">
+      <input type="number" id="computer" placeholder="Computer Marks (0-100)">
+      <button type="submit">Add Result</button>
+      <p id="message"></p>
+    </form>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by Name or ID">
+      <select id="gradeFilter">
+        <option value="All">All Grades</option>
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="A-">A-</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="F">F</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Total</th>
+          <th>Average</th>
+          <th>Grade</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="resultTable"></tbody>
+    </table>
+
+    <div id="summary">Total Students: 0 | Class Average: 0.00</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
